@@ -22,7 +22,7 @@ if 'host_type' not in st.session_state:
 if 'auto_refresh' not in st.session_state:
     st.session_state.auto_refresh = True
 if 'download_dir' not in st.session_state:
-    st.session_state.download_dir = "E:\AI项目\gen"  # 默认下载目录
+    st.session_state.download_dir = os.getenv('DOWNLOAD_DIR', './gen')  # 默认下载目录
 
 # 页面标题
 st.title("🎥 Sora2视频生成")

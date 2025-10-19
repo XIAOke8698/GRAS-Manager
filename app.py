@@ -31,7 +31,7 @@ def initialize_session_state():
     if 'auto_refresh' not in st.session_state:
         st.session_state.auto_refresh = True
     if 'download_dir' not in st.session_state:
-        st.session_state.download_dir = "E:\AI项目\gen"
+        st.session_state.download_dir = os.getenv('DOWNLOAD_DIR', './gen')
 
 
 initialize_session_state()
